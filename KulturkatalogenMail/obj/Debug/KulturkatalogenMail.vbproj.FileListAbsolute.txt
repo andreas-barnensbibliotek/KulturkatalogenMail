@@ -1,0 +1,14 @@
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.vbprojResolveAssemblyReference.cache
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.Resources.resources
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.xml
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\bin\Debug\KulturkatalogenMail.dll
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\bin\Debug\KulturkatalogenMail.pdb
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\bin\Debug\KulturkatalogenMail.xml
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.dll
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\obj\Debug\KulturkatalogenMail.pdb
+D:\devprojekt\libraries\KulturkatalogenMail\KulturkatalogenMail\bin\Debug\KulturkatalogenMail.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenMail.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenMail.dll
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenMail.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\KulturkatalogenMail.xml
