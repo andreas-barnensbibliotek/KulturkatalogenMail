@@ -318,7 +318,6 @@
                 width: 100%;
             }
 
-
         /* Odds and ends */
         .column {
             width: 300px;
