@@ -6,60 +6,60 @@ Public Class ArrangemangMailTemplate
 
     Private _htmltemplsrc As String = ConfigurationManager.AppSettings("htmltemplatesrc")
 
-    Public Function arrTackmailtemplate(arrobj As arrangemangInfo) As String
-        Dim mailobj As New katalogenMainMailHandler
-        Dim mailto As String = arrobj.UtovareData.Epost
+    'Public Function arrTackmailtemplate(arrobj As arrangemangInfo) As String
+    '    Dim mailobj As New katalogenMainMailHandler
+    '    Dim mailto As String = arrobj.UtovareData.Epost
 
-        If String.IsNullOrEmpty(mailto) Then
-            Return mailobj.MailStatus = "Det finns ingen epost kopplad till arrangemanget"
-        Else
+    '    If String.IsNullOrEmpty(mailto) Then
+    '        Return mailobj.MailStatus = "Det finns ingen epost kopplad till arrangemanget"
+    '    Else
 
-            mailobj.mailAmne = "Kulturkatalogen- Arrangemang: " & arrobj.Rubrik
-            mailobj.mailfran = ConfigurationManager.AppSettings("fromMailadress")
-            mailobj.mailtill = mailto
-            mailobj.mailBody = htmltemplate(arrobj, "tackmail")
+    '        mailobj.mailAmne = "Kulturkatalogen- Arrangemang: " & arrobj.Rubrik
+    '        mailobj.mailfran = ConfigurationManager.AppSettings("fromMailadress")
+    '        mailobj.mailtill = mailto
+    '        mailobj.mailBody = htmltemplate(arrobj, "tackmail")
 
-            Try
-                mailobj.mailSend = True
-                Return mailobj.MailStatus
+    '        Try
+    '            mailobj.mailSend = True
+    '            Return mailobj.MailStatus
 
-            Catch ex As Exception
-                Return mailobj.MailStatus = "Det blev fel när Tackmailet skulle skickas!"
+    '        Catch ex As Exception
+    '            Return mailobj.MailStatus = "Det blev fel när Tackmailet skulle skickas!"
 
-            End Try
-        End If
-    End Function
+    '        End Try
+    '    End If
+    'End Function
 
-    Public Function arrmailtemplate(arrobj As arrangemangInfo, mailto As String) As String
-        Dim mailobj As New katalogenMainMailHandler
+    'Public Function arrmailtemplate(arrobj As arrangemangInfo, mailto As String) As String
+    '    Dim mailobj As New katalogenMainMailHandler
 
-        If String.IsNullOrEmpty(mailto) Then
-            Return mailobj.MailStatus = "Det finns ingen användare kopplade till arrangemanget"
-        Else
+    '    If String.IsNullOrEmpty(mailto) Then
+    '        Return mailobj.MailStatus = "Det finns ingen användare kopplade till arrangemanget"
+    '    Else
 
-            mailobj.mailAmne = "Kulturkatalogen- Nytt Arrangemang: " & arrobj.Rubrik
-            mailobj.mailfran = ConfigurationManager.AppSettings("fromMailadress")
-            mailobj.mailtill = mailto
-            mailobj.mailBody = htmltemplate(arrobj, "arrhandler")
+    '        mailobj.mailAmne = "Kulturkatalogen- Nytt Arrangemang: " & arrobj.Rubrik
+    '        mailobj.mailfran = ConfigurationManager.AppSettings("fromMailadress")
+    '        mailobj.mailtill = mailto
+    '        mailobj.mailBody = htmltemplate(arrobj, "arrhandler")
 
-            Try
-                mailobj.mailSend = True
-                Return mailobj.MailStatus
+    '        Try
+    '            mailobj.mailSend = True
+    '            Return mailobj.MailStatus
 
-            Catch ex As Exception
-                Return mailobj.MailStatus = "Det blev fel när mailet skulle skickas"
+    '        Catch ex As Exception
+    '            Return mailobj.MailStatus = "Det blev fel när mailet skulle skickas"
 
-            End Try
-        End If
-    End Function
+    '        End Try
+    '    End If
+    'End Function
 
 
-    Private Function htmltemplate(arrobj As arrangemangInfo, mailtyp As String) As String
+    Public Function htmltemplate(arrobj As arrangemangInfo, mailtyp As String) As StringBuilder
         Dim getfile As String = ""
         Dim htmlstr As New StringBuilder
 
         Select Case mailtyp
-            Case "tackmail"
+            Case 1
                 getfile = "arrhtmlTackTemplate.txt"
             Case Else
                 getfile = "arrhtmlTemplate.txt"
@@ -68,7 +68,7 @@ Public Class ArrangemangMailTemplate
 
         htmlstr.Append(gethtmlfromfile(getfile, arrobj))
 
-        Return htmlstr.ToString
+        Return htmlstr
 
     End Function
 

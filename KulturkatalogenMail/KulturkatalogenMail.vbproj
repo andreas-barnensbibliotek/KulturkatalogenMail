@@ -69,6 +69,8 @@
     <Compile Include="handlers\katalogenMainMailHandler.vb" />
     <Compile Include="info\arrangemangInfo.vb" />
     <Compile Include="info\faktainfo.vb" />
+    <Compile Include="info\mailInfo.vb" />
+    <Compile Include="handlers\mailTemplateHandler.vb" />
     <Compile Include="info\mediaInfo.vb" />
     <Compile Include="info\utovareInfo.vb" />
     <Compile Include="katalogenMailController.vb" />
@@ -111,6 +113,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="htmltemplate\MailTemplate_pri_Denied.txt" />
+    <Content Include="htmltemplate\MailTemplate_pri_Approved.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_Denied.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_Approved.txt" />
+    <Content Include="htmltemplate\MailTemplate_pri_TackNyttArr.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_Archive.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_ReNew.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_TackNyttArr.txt" />
     <Content Include="htmltemplate\arrhtmlTackTemplate.txt" />
     <Content Include="htmltemplate\arrhtmlTemplate - Copy.html" />
     <Content Include="htmltemplate\arrhtmlTemplate.html" />

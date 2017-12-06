@@ -45,9 +45,33 @@ Imports KulturkatalogenMail
 
         End With
 
-        Dim retstri As String = obj.arraangemangmail(arrdata, "andreas.josefsson@kulturivast.se")
+        'Dim retstri As String = obj.arraangemangmail(arrdata, "andreas.josefsson@kulturivast.se")
 
-        Dim rettets As String = retstri
+        'Dim rettets As String = retstri
     End Sub
+
+    <TestMethod()> Public Sub TestMethod_mailtest()
+        Dim arrdata = New arrangemangInfo
+        With arrdata
+            .Datum = "20170905"
+            .Arrid = 1
+            .Rubrik = "test"
+            .UnderRubrik = "underrubriktext"
+
+        End With
+
+        Dim mailobj As New mailInfo
+
+        mailobj.Konstformid = 1
+        mailobj.utovaremailtoadress = "test@test.se"
+        mailobj.MailArrdata = arrdata
+        mailobj.MailTemplateId = 1
+
+        Dim obj As New katalogenMailController
+        obj.sendArrangemangsMail(mailobj)
+
+    End Sub
+
+
 
 End Class

@@ -44,29 +44,35 @@ Public Class katalogenMainMailHandler
 
     Private Sub sendmailet()
         Dim mailserver = ConfigurationManager.AppSettings("SMTPServerip")
-        Try
-            'Skapa mailet
-            Dim mail As New MailMessage()
+        If ConfigurationManager.AppSettings("maildebugMode") = "False" Then
 
-            'set adressen
-            mail.From = New MailAddress(_mailfran)
-            mail.To.Add(_mailTill)
+            Try
+                'Skapa mailet
+                Dim mail As New MailMessage()
 
-            'set innehållet
-            mail.Subject = _mailAmne
-            mail.Body = _mailBody
-            mail.IsBodyHtml = True
+                'set adressen
+                mail.From = New MailAddress(_mailfran)
+                mail.To.Add(_mailTill)
 
-            'send meddelandet
-            Dim smtp As New SmtpClient(mailserver)
-            smtp.Send(mail)
-            _status = "Mailet är skickat!"
+                'set innehållet
+                mail.Subject = _mailAmne
+                mail.Body = _mailBody
+                mail.IsBodyHtml = True
+
+                'send meddelandet
+                Dim smtp As New SmtpClient(mailserver)
+                smtp.Send(mail)
+                _status = "Mailet är skickat!"
 
 
-        Catch ex As Exception
-            'skicka fel om det blev nått
-            _status = "Nått blev fel! " & ex.Message
-        End Try
+            Catch ex As Exception
+                'skicka fel om det blev nått
+                _status = "Nått blev fel! " & ex.Message
+
+            End Try
+        Else
+            _status = "Mail in debugmode. (maildebugMode=true) inget mail har skickats!"
+        End If
 
     End Sub
 End Class
