@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="htmltemplate\MailTemplate_pri_Denied.txt" />
     <Content Include="htmltemplate\MailTemplate_pri_Approved.txt" />
+    <Content Include="htmltemplate\MailTemplate_pub_Approved_medkonsulent.txt" />
     <Content Include="htmltemplate\MailTemplate_pub_Denied.txt" />
     <Content Include="htmltemplate\MailTemplate_pub_Approved.txt" />
     <Content Include="htmltemplate\MailTemplate_pri_TackNyttArr.txt" />

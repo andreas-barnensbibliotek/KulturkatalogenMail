@@ -43,36 +43,55 @@ Public Class katalogenMainMailHandler
     End Property
 
     Private Sub sendmailet()
-        Dim mailserver = ConfigurationManager.AppSettings("SMTPServerip")
+
         If ConfigurationManager.AppSettings("maildebugMode") = "False" Then
+            mailsmtpsend()
 
-            Try
-                'Skapa mailet
-                Dim mail As New MailMessage()
+        Else 'debug is true
+            _status = "Mail in debugmode. "
 
-                'set adressen
-                mail.From = New MailAddress(_mailfran)
-                mail.To.Add(_mailTill)
+            If ConfigurationManager.AppSettings("mailToDebugMode") = "True" Then
+                _mailTill = ConfigurationManager.AppSettings("toMailadressdebug")
+                If Not String.IsNullOrEmpty(_mailTill) Then
+                    mailsmtpsend()
+                    _status &= "(maildebugMode=true and mailToDebugMode =True) mail har skickats till:" & _mailTill
 
-                'set innehållet
-                mail.Subject = _mailAmne
-                mail.Body = _mailBody
-                mail.IsBodyHtml = True
-
-                'send meddelandet
-                Dim smtp As New SmtpClient(mailserver)
-                smtp.Send(mail)
-                _status = "Mailet är skickat!"
-
-
-            Catch ex As Exception
-                'skicka fel om det blev nått
-                _status = "Nått blev fel! " & ex.Message
-
-            End Try
-        Else
-            _status = "Mail in debugmode. (maildebugMode=true) inget mail har skickats!"
+                Else
+                    _status = "Fel (maildebugMode=true and toMailadressdebug =True) i debugMailadressen!"
+                End If
+            Else
+                _status &= "(maildebugMode=true) inget mail har skickats!"
+            End If
         End If
+
+    End Sub
+
+    Private Sub mailsmtpsend()
+        Dim mailserver = ConfigurationManager.AppSettings("SMTPServerip")
+        Try
+            'Skapa mailet
+            Dim mail As New MailMessage()
+
+            'set adressen
+            mail.From = New MailAddress(_mailfran)
+            mail.To.Add(_mailTill)
+
+            'set innehållet
+            mail.Subject = _mailAmne
+            mail.Body = _mailBody
+            mail.IsBodyHtml = True
+
+            'send meddelandet
+            Dim smtp As New SmtpClient(mailserver)
+            smtp.Send(mail)
+            _status = "Mailet är skickat!"
+
+
+        Catch ex As Exception
+            'skicka fel om det blev nått
+            _status = "Nått blev fel! " & ex.Message
+
+        End Try
 
     End Sub
 End Class

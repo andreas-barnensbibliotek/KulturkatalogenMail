@@ -417,7 +417,8 @@
 							<p>Motiveringen är sammanfattningsvis följande:</p>
 							 <p>{{motivering}}</p>
 
-							<p>De uppgifter du har skrivit in i ansökan kommer nu att läggas in i Kulturkatalogen Väst.</p>							
+							<p>De uppgifter du har skrivit in i ansökan kommer nu att läggas in i Kulturkatalogen Väst.</p>
+							<p>Den konsulent som är kontaktperson för dig är {{KulturkatalogenAvsNamn}}, {{KulturkatalogenAvsEpost}}, {{KulturkatalogenAvsTel}} </p>
 							<p>En gång per år är Kulturkatalogen Väst öppen för ändringar. Vi meddelar dig när det är dags för det. Skulle du vilja justera något innan dess eller om du har frågor, hör av dig till konsulenten! </p>
                             <p>Hälsningar</p>
                             <p>Kulturkatalogen Väst</p>

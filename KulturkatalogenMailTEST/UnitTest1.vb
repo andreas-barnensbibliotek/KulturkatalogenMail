@@ -57,21 +57,27 @@ Imports KulturkatalogenMail
             .Arrid = 1
             .Rubrik = "test"
             .UnderRubrik = "underrubriktext"
+            .UtovareData.Organisation = "firman"
 
         End With
 
         Dim mailobj As New mailInfo
+        With mailobj
+            .utovaremailtoadress = "test@test.se"
+            .MailTemplateId = 1
 
-        mailobj.Konstformid = 1
-        mailobj.utovaremailtoadress = "test@test.se"
-        mailobj.MailArrdata = arrdata
-        mailobj.MailTemplateId = 1
+            .Konstformid = 1
+            .MailArrdata = arrdata
+            .Motivering = "standard text om arrangemanget"
+            .KulturkatalogenAvsNamn = "konsulent för konstformen"
+            .KulturkatalogenAvsEpost = "konsulent@test.se"
+            .KulturkatalogenAvsTel = "142536"
+        End With
 
         Dim obj As New katalogenMailController
         obj.sendArrangemangsMail(mailobj)
 
     End Sub
-
 
 
 End Class

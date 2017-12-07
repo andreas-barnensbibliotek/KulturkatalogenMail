@@ -7,30 +7,30 @@ Imports KulturkatalogenMail
 Public Class katalogenMailController
 
 
-    'Public Function arraangemangmail(maildata As arrangemangInfo, mailto As String) As String
-    '    Dim arrobj As New ArrangemangMailTemplate
-    '    Dim mailobj As New katalogenMainMailHandler
-    '    Dim retstatus As String = ""
+    Public Function arraangemangmail(maildata As arrangemangInfo, mailto As String) As String
+        'Dim arrobj As New ArrangemangMailTemplate
+        'Dim mailobj As New katalogenMainMailHandler
+        'Dim retstatus As String = ""
 
-    '    If ConfigurationManager.AppSettings("sendmaildebug") = True Then
+        'If ConfigurationManager.AppSettings("sendmaildebug") = True Then
 
-    '        Dim debugmail = ConfigurationManager.AppSettings("toMailadressdebug")
-    '        maildata.UtovareData.Epost = ConfigurationManager.AppSettings("tackmaildebug")
+        '    Dim debugmail = ConfigurationManager.AppSettings("toMailadressdebug")
+        '    maildata.UtovareData.Epost = ConfigurationManager.AppSettings("tackmaildebug")
 
-    '        retstatus = arrobj.arrTackmailtemplate(maildata) & " - tack to " & maildata.UtovareData.Epost & " DEBUG "
-    '        retstatus &= arrobj.arrmailtemplate(maildata, debugmail) & " -to " & debugmail & " DEBUG"
-    '        Return retstatus
-    '    Else
-    '        If ConfigurationManager.AppSettings("sendmail") = True Then
-    '            retstatus = arrobj.arrTackmailtemplate(maildata)
-    '            retstatus &= arrobj.arrmailtemplate(maildata, mailto)
-    '            Return retstatus
-    '        Else
-    '            Return "Send mail är inaktiverat"
-    '        End If
-    '    End If
+        '    retstatus = arrobj.arrTackmailtemplate(maildata) & " - tack to " & maildata.UtovareData.Epost & " DEBUG "
+        '    retstatus &= arrobj.arrmailtemplate(maildata, debugmail) & " -to " & debugmail & " DEBUG"
+        '    Return retstatus
+        'Else
+        '    If ConfigurationManager.AppSettings("sendmail") = True Then
+        '        retstatus = arrobj.arrTackmailtemplate(maildata)
+        '        retstatus &= arrobj.arrmailtemplate(maildata, mailto)
+        '        Return retstatus
+        '    Else
+        '        Return "Send mail är inaktiverat"
+        '    End If
+        'End If
 
-    'End Function
+    End Function
 
     Public Function sendArrangemangsMail(mailobj As mailInfo) As String
         Dim tmpObj As New mailTemplateHandler
@@ -48,7 +48,7 @@ Public Class katalogenMailController
             Return sendmailobj.MailStatus = "Det finns ingen mottagande epost kopplad till arrangemanget"
         Else
 
-            sendmailobj.mailAmne = "Kulturkatalogen- Nytt Arrangemang: " & mailobj.MailArrdata.Rubrik
+            sendmailobj.mailAmne = getMailAmnesrubrik(mailobj.MailTemplateId)
             sendmailobj.mailfran = ConfigurationManager.AppSettings("fromMailadress")
             sendmailobj.mailtill = mailobj.utovaremailtoadress
             sendmailobj.mailBody = mailobj.MailTemplateHTML
@@ -63,5 +63,9 @@ Public Class katalogenMailController
             End Try
         End If
     End Function
+    Private Function getMailAmnesrubrik(mailtyp As Integer) As String
+        Dim tmpObj As New mailTemplateHandler
+        Return tmpObj.getmailSubject(mailtyp)
 
+    End Function
 End Class

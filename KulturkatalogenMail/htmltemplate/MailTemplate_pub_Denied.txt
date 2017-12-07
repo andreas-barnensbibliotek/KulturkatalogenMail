@@ -425,7 +425,7 @@
                                     <h1>Hej!</h1>
                                     <p>Din ansökan till Kulturkatalogen Väst har tyvärr avslagits.</p>
                                     <p>Motiveringen är sammanfattningsvis följande:</p>
-                                    Punkterna som scenkonstgruppen kommer överens om
+                                     <p>{{motivering}}</p>
 
                                     <p>Du är givetvis välkommen att söka igen, med ett annat projekt/föreställning.</p>
                                     <p>Hälsningar</p>

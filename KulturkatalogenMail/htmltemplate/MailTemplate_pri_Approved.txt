@@ -422,7 +422,7 @@
                                     <h2>Hej!</h2>
                                     <p>Din ansökan till Kulturkatalogen Väst har beviljats! Vi hälsar dig välkommen in.</p>
                                     <p>Motiveringen är sammanfattningsvis följande:</p>
-                                    Punkterna scenkonstgruppen kommer överens om.
+                                    <p>{{motivering}}</p>
 
                                     <p>De uppgifter du har skrivit in i ansökan kommer nu att läggas in i Kulturkatalogen Väst.</p>
                                     <p>Den konsulent som är kontaktperson för dig är {{KulturkatalogenAvsNamn}}, {{KulturkatalogenAvsEpost}}, {{KulturkatalogenAvsTel}} </p>

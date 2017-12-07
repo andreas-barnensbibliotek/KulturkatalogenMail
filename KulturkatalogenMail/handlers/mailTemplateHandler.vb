@@ -103,12 +103,13 @@ Public Class mailTemplateHandler
         retstr.Replace("{{rubrik}}", arrobj.MailArrdata.Rubrik)
         retstr.Replace("{{underrubrik}}", arrobj.MailArrdata.UnderRubrik)
         retstr.Replace("{{utovarenamn}}", arrobj.MailArrdata.UtovareData.Organisation)
-
         retstr.Replace("{{detailLink}}", detaljlink(arrobj.MailArrdata.Arrid))
 
-        retstr.Replace("{{KulturkatalogenAvsNamn}}", arrobj.KulturkatalogenAvsNamn)
-        retstr.Replace("{{KulturkatalogenAvsEpost}}", arrobj.KulturkatalogenAvsEpost)
-        retstr.Replace("{{KulturkatalogenAvsTel}}", arrobj.KulturkatalogenAvsTel)
+        retstr.Replace("{{motivering}}", arrobj.Motivering)
+
+        'retstr.Replace("{{KulturkatalogenAvsNamn}}", arrobj.KulturkatalogenAvsNamn)
+        'retstr.Replace("{{KulturkatalogenAvsEpost}}", arrobj.KulturkatalogenAvsEpost)
+        'retstr.Replace("{{KulturkatalogenAvsTel}}", arrobj.KulturkatalogenAvsTel)
 
         Return retstr.ToString
 

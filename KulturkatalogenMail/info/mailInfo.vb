@@ -102,4 +102,14 @@
             _mailArrData = value
         End Set
     End Property
+
+    Private _motivering As String
+    Public Property Motivering() As String
+        Get
+            Return _motivering
+        End Get
+        Set(ByVal value As String)
+            _motivering = value
+        End Set
+    End Property
 End Class
