@@ -7,37 +7,53 @@ Imports KulturkatalogenMail
 Public Class katalogenMailController
 
 
-    Public Function arraangemangmail(maildata As arrangemangInfo, mailto As String) As String
-        'Dim arrobj As New ArrangemangMailTemplate
-        'Dim mailobj As New katalogenMainMailHandler
-        'Dim retstatus As String = ""
 
-        'If ConfigurationManager.AppSettings("sendmaildebug") = True Then
-
-        '    Dim debugmail = ConfigurationManager.AppSettings("toMailadressdebug")
-        '    maildata.UtovareData.Epost = ConfigurationManager.AppSettings("tackmaildebug")
-
-        '    retstatus = arrobj.arrTackmailtemplate(maildata) & " - tack to " & maildata.UtovareData.Epost & " DEBUG "
-        '    retstatus &= arrobj.arrmailtemplate(maildata, debugmail) & " -to " & debugmail & " DEBUG"
-        '    Return retstatus
-        'Else
-        '    If ConfigurationManager.AppSettings("sendmail") = True Then
-        '        retstatus = arrobj.arrTackmailtemplate(maildata)
-        '        retstatus &= arrobj.arrmailtemplate(maildata, mailto)
-        '        Return retstatus
-        '    Else
-        '        Return "Send mail är inaktiverat"
-        '    End If
-        'End If
-
-    End Function
 
     Public Function sendArrangemangsMail(mailobj As mailInfo) As String
         Dim tmpObj As New mailTemplateHandler
-        Dim tmpMailTemplateHTML As StringBuilder = tmpObj.gethtmltemplate(mailobj.MailTemplateId)
+        Dim tmpMailTemplateHTML As New StringBuilder
+        Dim ret As String = "Fel vid hämtning av Templates"
+        Select Case mailobj.MailTemplateId
+            Case "1" 'Nytt arrangemang
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("1")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                ret = arrSendmail(mailobj)
 
-        mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
-        Return arrSendmail(mailobj)
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("2")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                arrSendmail(mailobj)
+            Case "2" 'godkänt
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("3")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                ret = arrSendmail(mailobj)
+
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("4")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                arrSendmail(mailobj)
+            Case "3" 'Nekat
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("7")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                ret = arrSendmail(mailobj)
+
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("8")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                arrSendmail(mailobj)
+            Case "4" 'arkiv
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("5")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                arrSendmail(mailobj)
+
+                ret = arrSendmail(mailobj)
+            Case "0" 'renew
+                tmpMailTemplateHTML = tmpObj.gethtmltemplate("6")
+                mailobj.MailTemplateHTML = tmpObj.addDataToTemplate(tmpMailTemplateHTML, mailobj)
+                arrSendmail(mailobj)
+
+                ret = arrSendmail(mailobj)
+
+        End Select
+
+        Return ret
 
     End Function
 
