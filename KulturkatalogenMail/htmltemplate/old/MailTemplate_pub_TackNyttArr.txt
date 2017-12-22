@@ -379,13 +379,13 @@
 <body bgcolor="#FFFFFF">
 
 <!-- HEADER -->
-<table class="head-wrap" bgcolor="transparent">
+<table class="head-wrap" bgcolor="#ccc">
 	<tr>
 		<td></td>
 		<td class="header container" >
 				
 				<div class="content">
-				<table bgcolor="transparent">
+				<table bgcolor="#ccc">
 					<tr>
 						<td><img src="http://kulturkatalog.kivdev.se//Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
 						<td align="right"><h6 class="collapse"></h6></td>
@@ -413,24 +413,35 @@
 						<div class="innehallblock">
                            
                             <h1>Hej!</h1>
-                            <p>Ditt projekt {{rubrik}} i Kulturkatalogen Väst löper ut {{datumbrytpunkt}}</p>
-							<p>Vill du aktualisera det igen, hör av dig till: {{KulturkatalogenAvsNamn}}, {{KulturkatalogenAvsEpost}}, {{KulturkatalogenAvsTel}}</p>
+                            <h2>Tack för din ansökan till Kulturkatalogen Väst!</h2>
+                            <p>Nya ansökningar behandlas tre perioder per år, och följande beslutsdatum gäller:</p>
+                            <p>1 mars (ansökan ska ha inkommit senast 15 januari)</p>
+                            <p>1 juni (ansökan ska ha inkommit senast 15 april)</p>
+                            <p>1 november (ansökan ska ha inkommit senast 15 september)</p>
+                            <p>Om produktionen/projektet godkänns kommer den att publiceras på Kulturkatalogen Västs webbplats i anslutning till att besked ges. Du kommer att få beslut med motivering på mail från den konsulent som handlägger din ansökan. Eventuellt kommer du att kontaktas om vi undrar något.</p>
+                            <p>Vad gäller kulturpedagogiska projekt så kommer en konsulent/producent att höra av sig till dig under handläggningstiden, på telefon eller mail.</p>
+                            <p>Vad gäller föreställningar på turné vill konsulenten/producenten se föreställningen med publik bestående av målgruppen. Vi kommer att höra av oss för att få ev speldatum/platser under handläggningstiden. Om det inte är möjligt att se föreställningen live kan en enkelt avfilmad föreställning med publik bestående av målgruppen vara ett alternativ.</p>
+                            <p>Vi hörs!</p>
                             <p>Hälsningar</p>
                             <p>Kulturkatalogen Väst</p>
                             
 						</div>		
 						<hr>                               
                         <div class="mailbox-read-info">
-                            <h4>Inkommen ansökan:</h4>
+                            <h3>Inkommen ansökan:</h3>
                             <span class="mailbox-read-time ">{{datum}}</span>
-                            <h3>{{rubrik}}</h3>
+                            <h1>{{rubrik}}</h1>
                             <h4>{{underrubrik}}</h4>
                             <h5>Ut&ouml;vare: {{utovarenamn}}</h5>
-                            <p><a href="{{detailLink}}">till projektet >></a></p>
+                            <p><a href="{{detailLink}}">Förhandsgranska din ansökan>></a></p>
                         </div>	
                         <hr>			
                         <div>
-                            
+                            <p>
+                                Vid frågor kontakta:<br />
+                                E-post: info@kulturkatalogenvast.se<br />
+                                Telefon: 031-153246
+                            </p>
                         </div>	
 					</td>
 				</tr>
@@ -442,17 +453,13 @@
 	</tr>
 </table><!-- /BODY -->
     <!-- HEADER -->
-    <table class="footer-wrap" bgcolor="transparent">
+    <table class="footer-wrap" bgcolor="#ccc">
         <tr>
             <td></td>
             <td class="footer container">
 
                 <div class="content">
-					<p>
-						Vid frågor kontakta:<br />
-						E-post: info@kulturkatalogenvast.se<br />
-						Telefon: 031-153246
-					</p>    
+                    
                 </div>
 
             </td>

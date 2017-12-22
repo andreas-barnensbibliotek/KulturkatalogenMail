@@ -379,13 +379,13 @@
 <body bgcolor="#FFFFFF">
 
 <!-- HEADER -->
-<table class="head-wrap" bgcolor="#ccc">
+<table class="head-wrap" bgcolor="transparent">
 	<tr>
 		<td></td>
 		<td class="header container" >
 				
 				<div class="content">
-				<table bgcolor="#ccc">
+				<table bgcolor="transparent">
 					<tr>
 						<td><img src="http://kulturkatalog.kivdev.se//Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
 						<td align="right"><h6 class="collapse"></h6></td>
@@ -418,7 +418,7 @@
 							 <p>{{motivering}}</p>
 
 							<p>De uppgifter du har skrivit in i ansökan kommer nu att läggas in i Kulturkatalogen Väst.</p>
-							<p>Den konsulent som är kontaktperson för dig är {{KulturkatalogenAvsNamn}}, {{KulturkatalogenAvsEpost}}, {{KulturkatalogenAvsTel}} </p>
+							<p>Den konsulent som är kontaktperson för dig är {{KulturkatalogenAvsNamn}}, {{KulturkatalogenAvsEpost}}</p>
 							<p>En gång per år är Kulturkatalogen Väst öppen för ändringar. Vi meddelar dig när det är dags för det. Skulle du vilja justera något innan dess eller om du har frågor, hör av dig till konsulenten! </p>
                             <p>Hälsningar</p>
                             <p>Kulturkatalogen Väst</p>
@@ -435,11 +435,7 @@
                         </div>	
                         <hr>			
                         <div>
-                            <p>
-                                Vid frågor kontakta:<br />
-                                E-post: info@kulturkatalogenvast.se<br />
-                                Telefon: 031-153246
-                            </p>
+                            
                         </div>	
 					</td>
 				</tr>
@@ -451,13 +447,17 @@
 	</tr>
 </table><!-- /BODY -->
     <!-- HEADER -->
-    <table class="footer-wrap" bgcolor="#ccc">
+    <table class="footer-wrap" bgcolor="transparent">
         <tr>
             <td></td>
             <td class="footer container">
 
                 <div class="content">
-                    
+					<p>
+						Vid frågor kontakta:<br />
+						E-post: info@kulturkatalogenvast.se<br />
+						Telefon: 031-153246
+					</p>   
                 </div>
 
             </td>

@@ -292,13 +292,8 @@
         .mailbox-read-info p {
             margin-top: 1rem;
         }
-
-        .mailbox-read-info p {
-            margin-top: 1rem;
-        }
-
-        .innehallblock a {
-            text-decoration: underline;
+        .innehallblock a{
+             text-decoration: underline;
         }
         /* ---------------------------------------------------
                 RESPONSIVENESS
@@ -391,13 +386,13 @@
 <body bgcolor="#FFFFFF">
 
     <!-- HEADER -->
-    <table class="head-wrap" bgcolor="transparent">
+    <table class="head-wrap" bgcolor="#ccc">
         <tr>
             <td></td>
             <td class="header container">
 
                 <div class="content">
-                    <table bgcolor="transparent">
+                    <table bgcolor="#ccc">
                         <tr>
                             <td><img src="http://kulturkatalog.kivdev.se//Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
                             <td align="right"><h6 class="collapse"></h6></td>
@@ -423,28 +418,20 @@
                                 <div class="innehallblock">
 
                                     <h1>Hej!</h1>
-                                    <p>Din ansökan till Kulturkatalogen Väst har tyvärr avslagits.</p>
-                                    <p>Motiveringen är sammanfattningsvis följande:</p>
-                                     <p>{{motivering}}</p>
-
-                                    <p>Du är givetvis välkommen att söka igen, med ett annat projekt/föreställning.</p>
-                                    <p>Hälsningar</p>
-                                    <p>Kulturkatalogen Väst</p>
+                                    <p>En ny ansökan till Kulturkatalogen Väst har kommit in. Ett bekräftelsemail är utskickat, med kopia till dig.</p>                                   
+                                    <a href="{{detailLink}}">Hantera ansökan (Godkänn/Neka) >></a>
 
                                 </div>
                                 <hr>
                                 <div class="mailbox-read-info">
-                                    <h4>Avslagen ansökan:</h4>
+                                    <h3>Inkommen ansökan:</h3>
                                     <span class="mailbox-read-time ">{{datum}}</span>
-                                    <h3>{{rubrik}}</h3>
+                                    <h1>{{rubrik}}</h1>
                                     <h4>{{underrubrik}}</h4>
                                     <h5>Ut&ouml;vare: {{utovarenamn}}</h5>
-                                    <p><a href="{{detailLink}}">Förhandsgranska din ansökan>></a></p>
                                 </div>
                                 <hr>
-                                <div>
-                                    
-                                </div>
+
                             </td>
                         </tr>
                     </table>
@@ -455,17 +442,13 @@
         </tr>
     </table><!-- /BODY -->
     <!-- HEADER -->
-    <table class="footer-wrap" bgcolor="transparent">
+    <table class="footer-wrap" bgcolor="#ccc">
         <tr>
             <td></td>
             <td class="footer container">
 
                 <div class="content">
-					<p>
-						Vid frågor kontakta:<br />
-						E-post: info@kulturkatalogenvast.se<br />
-						Telefon: 031-153246
-					</p>
+
                 </div>
 
             </td>

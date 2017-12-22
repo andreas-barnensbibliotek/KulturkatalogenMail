@@ -103,23 +103,28 @@ Public Class mailTemplateHandler
         retstr.Replace("{{rubrik}}", arrobj.MailArrdata.Rubrik)
         retstr.Replace("{{underrubrik}}", arrobj.MailArrdata.UnderRubrik)
         retstr.Replace("{{utovarenamn}}", arrobj.MailArrdata.UtovareData.Organisation)
-        retstr.Replace("{{detailLink}}", detaljlink(arrobj.MailArrdata.Arrid))
-
+        retstr.Replace("{{detailgranskaLink}}", detaljlink(arrobj.MailArrdata.Arrid, "granska"))
+        retstr.Replace("{{detailLink}}", detaljlink(arrobj.MailArrdata.Arrid, "publik"))
         retstr.Replace("{{motivering}}", arrobj.Motivering)
 
-        'retstr.Replace("{{KulturkatalogenAvsNamn}}", arrobj.KulturkatalogenAvsNamn)
-        'retstr.Replace("{{KulturkatalogenAvsEpost}}", arrobj.KulturkatalogenAvsEpost)
-        'retstr.Replace("{{KulturkatalogenAvsTel}}", arrobj.KulturkatalogenAvsTel)
+        retstr.Replace("{{KulturkatalogenAvsNamn}}", arrobj.KulturkatalogenAvsNamn)
+        retstr.Replace("{{KulturkatalogenAvsEpost}}", arrobj.KulturkatalogenAvsEpost)
+        retstr.Replace("{{KulturkatalogenUserid}}", arrobj.KulturkatalogenUserid)
 
         Return retstr.ToString
 
     End Function
-    Private Function detaljlink(arrid As Integer) As String
+    Private Function detaljlink(arrid As Integer, typ As String) As String
 
         Dim detailLink As New StringBuilder
 
         detailLink.Append(ConfigurationManager.AppSettings("serverurl"))
-        detailLink.Append("/Kulturkatalogen/ArrangemangDetail/id/")
+        If typ = "granska" Then
+            detailLink.Append("/KulturkatalogenAdmin/GranskaDetalj/id/")
+        Else
+            detailLink.Append("/Kulturkatalogen/ArrangemangDetail/id/")
+        End If
+
         detailLink.Append(arrid.ToString)
 
         Return detailLink.ToString

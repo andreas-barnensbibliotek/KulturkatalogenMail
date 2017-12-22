@@ -72,7 +72,15 @@
             _kulturkatalogenAvsTel = value
         End Set
     End Property
-
+    Private _kulturkatalogenUserid As Integer
+    Public Property KulturkatalogenUserid() As Integer
+        Get
+            Return _kulturkatalogenUserid
+        End Get
+        Set(ByVal value As Integer)
+            _kulturkatalogenUserid = value
+        End Set
+    End Property
     Private _MailTemplateID As Integer
     Public Property MailTemplateId() As Integer
         Get

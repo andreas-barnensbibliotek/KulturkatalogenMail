@@ -386,13 +386,13 @@
 <body bgcolor="#FFFFFF">
 
     <!-- HEADER -->
-    <table class="head-wrap" bgcolor="#ccc">
+    <table class="head-wrap" bgcolor="transparent">
         <tr>
             <td></td>
             <td class="header container">
 
                 <div class="content">
-                    <table bgcolor="#ccc">
+                    <table bgcolor="transparent">
                         <tr>
                             <td><img src="http://kulturkatalog.kivdev.se//Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
                             <td align="right"><h6 class="collapse"></h6></td>
@@ -419,14 +419,14 @@
 
                                     <h1>Hej!</h1>
                                     <p>En ny ansökan till Kulturkatalogen Väst har kommit in. Ett bekräftelsemail är utskickat, med kopia till dig.</p>                                   
-                                    <a href="{{detailLink}}">Hantera ansökan (Godkänn/Neka) >></a>
+                                    <a href="{{detailgranskaLink}}/ukons/{{KulturkatalogenUserid}}">Hantera ansökan (Godkänn/Neka) >></a>
 
                                 </div>
                                 <hr>
                                 <div class="mailbox-read-info">
-                                    <h3>Inkommen ansökan:</h3>
+                                    <h4>Inkommen ansökan:</h4>
                                     <span class="mailbox-read-time ">{{datum}}</span>
-                                    <h1>{{rubrik}}</h1>
+                                    <h3>{{rubrik}}</h3>
                                     <h4>{{underrubrik}}</h4>
                                     <h5>Ut&ouml;vare: {{utovarenamn}}</h5>
                                 </div>
@@ -442,13 +442,17 @@
         </tr>
     </table><!-- /BODY -->
     <!-- HEADER -->
-    <table class="footer-wrap" bgcolor="#ccc">
+    <table class="footer-wrap" bgcolor="transparent">
         <tr>
             <td></td>
             <td class="footer container">
 
                 <div class="content">
-
+					<p>
+						Vid frågor kontakta:<br />
+						E-post: info@kulturkatalogenvast.se<br />
+						Telefon: 031-153246
+					</p>
                 </div>
 
             </td>
