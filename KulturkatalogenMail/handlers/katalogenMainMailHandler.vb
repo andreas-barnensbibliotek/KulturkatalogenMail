@@ -60,7 +60,7 @@ Public Class katalogenMainMailHandler
                     _status = "Fel (maildebugMode=true and toMailadressdebug =True) i debugMailadressen!"
                 End If
             Else
-                _status &= "(maildebugMode=true) inget mail har skickats!"
+                _status &= "(maildebugMode=False) inget mail har skickats!"
             End If
         End If
 

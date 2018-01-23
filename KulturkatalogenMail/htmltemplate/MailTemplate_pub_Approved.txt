@@ -387,7 +387,7 @@
 				<div class="content">
 				<table bgcolor="transparent">
 					<tr>
-						<td><img src="http://kulturkatalog.kivdev.se//Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
+						<td><img src="http://kulturkatalog.kivdev.se/Portals/_default/Skins/kk_Admin_Acklay/img/kulturkatalogen/kulturkatalogen250.png" /></td>
 						<td align="right"><h6 class="collapse"></h6></td>
 					</tr>
 				</table>
