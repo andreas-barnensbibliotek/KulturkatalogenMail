@@ -418,13 +418,10 @@
                             <p>1 mars (ansökan ska ha inkommit senast 15 januari)</p>
                             <p>1 juni (ansökan ska ha inkommit senast 15 april)</p>
                             <p>1 november (ansökan ska ha inkommit senast 15 september)</p>
-                            <p>Om föreställningen/projektet/besöksmålet godkänns kommer den att publiceras på Kulturkatalogen Västs webbplats i anslutning till att besked ges. Du kommer att få beslut med motivering på mail från den konsulent som handlägger din ansökan.</p>
-                            <p>För att kunna göra en bedömning vill konsulenten se föreställningen med publik bestående av målgruppen. Vi kommer att höra av oss under handläggningstiden för att få information om speldatum/spelplatser. Om det inte är möjligt att se föreställningen live kan en enkelt avfilmad föreställning med publik bestående av målgruppen vara ett alternativ.</p>
-                           
-							<p>Vad gäller workshops/projekt och besöksmål så kommer en konsulent att höra av sig  under handläggningstiden, på telefon eller mail.</p>
-                            <p>För redan godkända föreställningar/projekt/resmål:<br >Föreställningar/projekt/resmål som redan är godkända kommer inte att bedömas igen utan publiceras direkt vid det datum då Kulturkatalogen Väst uppdateras. </p>
-
-							<p>Vi hörs!</p>
+                            <p>Om produktionen/projektet godkänns kommer den att publiceras på Kulturkatalogen Västs webbplats i anslutning till att besked ges. Du kommer att få beslut med motivering på mail från den konsulent som handlägger din ansökan. Eventuellt kommer du att kontaktas om vi undrar något.</p>
+                            <p>Vad gäller workshops/projekt så kommer en konsulent/producent att höra av sig till dig under handläggningstiden, på telefon eller mail.</p>
+                            <p>Vad gäller föreställningar på turné vill konsulenten/producenten se föreställningen med publik bestående av målgruppen. Vi kommer att höra av oss för att få ev speldatum/platser under handläggningstiden. Om det inte är möjligt att se föreställningen live kan en enkelt avfilmad föreställning med publik bestående av målgruppen vara ett alternativ.</p>
+                            <p>Vi hörs!</p>
                             <p>Hälsningar</p>
                             <p>Kulturkatalogen Väst</p>
                             
