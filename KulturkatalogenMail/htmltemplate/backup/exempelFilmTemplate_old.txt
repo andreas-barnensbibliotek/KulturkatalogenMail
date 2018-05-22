@@ -1,0 +1,11 @@
+    <hr />      
+      <li class="row col-sm-12">
+        <div class="mediabox">
+		 <a href="{{mediaurl}}"><img alt="" width="200" src="http://img.talkandroid.com/uploads/2014/06/YouTube_App_Large_Icon.png" style="max-width:100%;" />
+		 <p><b>{{mediaTitle}}</b></p></a>
+        </div>
+        <div class="col-sm-12 col-md-10">
+          <a href="{{mediaLink}}" class="mailbox-attachment-name">{{mediaTitle}}</a>
+          <div class="mailbox-attachment-size">{{mediaBeskrivning}}</div>
+        </div>
+      </li>     

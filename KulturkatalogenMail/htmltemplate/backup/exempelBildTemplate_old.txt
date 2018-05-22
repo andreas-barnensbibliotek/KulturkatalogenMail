@@ -1,0 +1,10 @@
+    <hr />
+      <li class="row col-sm-12" style="padding-bottom:2rem;">
+       <div class="mediabox">
+          <img  width="200" alt="{{mediaalt}}" src="{{mediaurl}}" style="max-width:100%;" />
+        </div>
+        <div class="col-sm-12 col-md-10">
+          <a href="{{mediaLink}}" class="mailbox-attachment-name">{{mediaTitle}}</a>
+          <div class="mailbox-attachment-size">{{mediaBeskrivning}}</div>
+        </div>
+      </li>    

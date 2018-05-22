@@ -113,8 +113,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="htmltemplate\MailTemplate_pri_Denied.txt" />
     <Content Include="htmltemplate\MailTemplate_pri_Approved.txt" />
+    <Content Include="htmltemplate\MailTemplate_pri_Denied.txt" />
+    <Content Include="htmltemplate\old\MailTemplate_pub_Approved_change180215.txt" />
     <Content Include="htmltemplate\MailTemplate_pub_Approved_medkonsulent.txt" />
     <Content Include="htmltemplate\MailTemplate_pub_Denied.txt" />
     <Content Include="htmltemplate\MailTemplate_pub_Approved.txt" />
@@ -131,6 +132,7 @@
     <Content Include="htmltemplate\exempelBildTemplate.txt" />
     <Content Include="htmltemplate\exempelFilmTemplate.txt" />
     <Content Include="htmltemplate\gentest.html" />
+    <Content Include="htmltemplate\old\MailTemplate_pri_Approved_change180215.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

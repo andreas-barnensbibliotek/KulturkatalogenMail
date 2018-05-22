@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <!-- If you delete this meta tag, Half Life 3 will never be released. -->
@@ -7,10 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Kulturkatalogen Väst- arrangemang</title>
 
+
     <style>
         /* -------------------------------------
-                GLOBAL
-        ------------------------------------- */
+                    GLOBAL
+            ------------------------------------- */
         * {
             margin: 0;
             padding: 0;
@@ -39,8 +40,8 @@
 
 
         /* -------------------------------------
-                ELEMENTS
-        ------------------------------------- */
+                    ELEMENTS
+            ------------------------------------- */
         a {
             color: inherit;
             font-size: inherit;
@@ -109,8 +110,8 @@
         }
 
         /* -------------------------------------
-                HEADER
-        ------------------------------------- */
+                    HEADER
+            ------------------------------------- */
         table.head-wrap {
             width: 100%;
         }
@@ -126,16 +127,16 @@
 
 
         /* -------------------------------------
-                BODY
-        ------------------------------------- */
+                    BODY
+            ------------------------------------- */
         table.body-wrap {
             width: 100%;
         }
 
 
         /* -------------------------------------
-                FOOTER
-        ------------------------------------- */
+                    FOOTER
+            ------------------------------------- */
         table.footer-wrap {
             width: 100%;
             clear: both !important;
@@ -153,8 +154,8 @@
 
 
         /* -------------------------------------
-                TYPOGRAPHY
-        ------------------------------------- */
+                    TYPOGRAPHY
+            ------------------------------------- */
         h1, h2, h3, h4, h5, h6 {
             font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
             line-height: 1.1;
@@ -212,7 +213,7 @@
         p, ul {
             margin-bottom: 10px;
             font-weight: normal;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.6;
         }
 
@@ -233,8 +234,8 @@
             }
 
             /* -------------------------------------
-                SIDEBAR
-        ------------------------------------- */
+                    SIDEBAR
+            ------------------------------------- */
             ul.sidebar {
                 background: #ebebeb;
                 display: block;
@@ -280,25 +281,13 @@
 
         .innehallblock {
             padding-top: 5px;
-            padding-bottom: 2em;
             font-size: 14px;
         }
 
-        .mailbox-read-info a {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .mailbox-read-info p {
-            margin-top: 1rem;
-        }
-        .innehallblock a{
-             text-decoration: underline;
-        }
         /* ---------------------------------------------------
-                RESPONSIVENESS
-                Nuke it from orbit. It's the only way to be sure.
-        ------------------------------------------------------ */
+                    RESPONSIVENESS
+                    Nuke it from orbit. It's the only way to be sure.
+            ------------------------------------------------------ */
 
         /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
         .container {
@@ -356,10 +345,10 @@
 
 
         /* -------------------------------------------
-                PHONE
-                For clients that support media queries.
-                Nothing fancy.
-        -------------------------------------------- */
+                    PHONE
+                    For clients that support media queries.
+                    Nothing fancy.
+            -------------------------------------------- */
         @media only screen and (max-width: 600px) {
 
             a[class="btn"] {
@@ -378,7 +367,16 @@
                 width: auto !important;
             }
         }
+
+        .indrag {
+            margin-left: 20px;
+        }
+
+        .utovaretomail {
+            font-style: italic;
+        }
     </style>
+
 
 
 </head>
@@ -423,14 +421,20 @@
 
                                 </div>
                                 <hr>
-                                <div class="mailbox-read-info">
-                                    <h4>Inkommen ansökan:</h4>
-                                    <span class="mailbox-read-time ">{{datum}}</span>
-                                    <h3>{{rubrik}}</h3>
-                                    <h4>{{underrubrik}}</h4>
-                                    <h5>Ut&ouml;vare: {{utovarenamn}}</h5>
+                                 <div class="indrag mailbox-read-info">
+                                    <h2>Inkommen ansökan:</h2>
+                                    <hr />
+                                    <div class="indrag arrangemang">
+                                        <span class="mailbox-read-time ">{{datum}}</span>
+                                        <h3>{{rubrik}}</h3>
+                                        <h4>{{underrubrik}}</h4>
+                                        <h4>Ut&ouml;vare: {{utovarenamn}}</h4>
+                                        <h5><a href="{{detailLink}}">Granska din ansökan>></a></h5>
+                                    </div>
+                                    <hr />
+                                    <br />
                                 </div>
-                                <hr>
+                                <hr />
 
                             </td>
                         </tr>
@@ -441,23 +445,24 @@
             <td></td>
         </tr>
     </table><!-- /BODY -->
-    <!-- HEADER -->
+    <!-- footer -->
     <table class="footer-wrap" bgcolor="transparent">
         <tr>
             <td></td>
-            <td class="footer container">
+            <td class="footer container" style="background-image:url(http://kulturkatalog.kivdev.se/Portals/0/kulturkatalogenArrImages/kulturkatalogen/bak-kulturkatalogenny_1.jpg); background-size:cover;">
 
                 <div class="content">
-					<p>
-						Vid frågor kontakta:<br />
-						E-post: info@kulturkatalogenvast.se<br />
-						Telefon: 031-153246
-					</p>
+
+                    <h2>Vid frågor kontakta</h2>
+                    <p>
+                        <b>E-post:</b> yvonne.jagersjo@kulturivast.se<br />
+                        <b>Telefon:</b> 0700- 822563
+                    </p>
                 </div>
 
             </td>
             <td></td>
         </tr>
-    </table><!-- /HEADER -->
+    </table><!-- /footer -->
 </body>
 </html>
